@@ -385,6 +385,7 @@ function ftoverride_get_financialType($action) {
     'return' => ["description"],
     'description' => ['!=' => ""],
     'id' => ['IN' => array_keys($financialTypes)],
+    'options' => ['limit' => 0],
   ]);
   $descFinancialType = [];
   if (!empty($result['values'])) {
