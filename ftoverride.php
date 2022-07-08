@@ -13,15 +13,6 @@ function ftoverride_civicrm_config(&$config) {
 }
 
 /**
- * Implements hook_civicrm_xmlMenu().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_xmlMenu
- */
-function ftoverride_civicrm_xmlMenu(&$files) {
-  _ftoverride_civix_civicrm_xmlMenu($files);
-}
-
-/**
  * Implements hook_civicrm_install().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_install
@@ -84,7 +75,6 @@ function ftoverride_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_managed
  */
 function ftoverride_civicrm_managed(&$entities) {
-  _ftoverride_civix_civicrm_managed($entities);
   $entities[] = [
     'module' => 'com.megaphonetech.ftoverride',
     'name' => 'contributionCustomfield',
@@ -141,42 +131,6 @@ function ftoverride_civicrm_managed(&$entities) {
       'option_group_id' => 'ft_override_designation'
     ],
   ];
-}
-
-/**
- * Implements hook_civicrm_caseTypes().
- *
- * Generate a list of case-types.
- *
- * Note: This hook only runs in CiviCRM 4.4+.
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_caseTypes
- */
-function ftoverride_civicrm_caseTypes(&$caseTypes) {
-  _ftoverride_civix_civicrm_caseTypes($caseTypes);
-}
-
-/**
- * Implements hook_civicrm_angularModules().
- *
- * Generate a list of Angular modules.
- *
- * Note: This hook only runs in CiviCRM 4.5+. It may
- * use features only available in v4.6+.
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_angularModules
- */
-function ftoverride_civicrm_angularModules(&$angularModules) {
-  _ftoverride_civix_civicrm_angularModules($angularModules);
-}
-
-/**
- * Implements hook_civicrm_alterSettingsFolders().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_alterSettingsFolders
- */
-function ftoverride_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
-  _ftoverride_civix_civicrm_alterSettingsFolders($metaDataFolders);
 }
 
 /**
