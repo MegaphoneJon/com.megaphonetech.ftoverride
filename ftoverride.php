@@ -22,48 +22,12 @@ function ftoverride_civicrm_install() {
 }
 
 /**
- * Implements hook_civicrm_postInstall().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_postInstall
- */
-function ftoverride_civicrm_postInstall() {
-  _ftoverride_civix_civicrm_postInstall();
-}
-
-/**
- * Implements hook_civicrm_uninstall().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_uninstall
- */
-function ftoverride_civicrm_uninstall() {
-  _ftoverride_civix_civicrm_uninstall();
-}
-
-/**
  * Implements hook_civicrm_enable().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
 function ftoverride_civicrm_enable() {
   _ftoverride_civix_civicrm_enable();
-}
-
-/**
- * Implements hook_civicrm_disable().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_disable
- */
-function ftoverride_civicrm_disable() {
-  _ftoverride_civix_civicrm_disable();
-}
-
-/**
- * Implements hook_civicrm_upgrade().
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_upgrade
- */
-function ftoverride_civicrm_upgrade($op, CRM_Queue_Queue $queue = NULL) {
-  return _ftoverride_civix_civicrm_upgrade($op, $queue);
 }
 
 /**
@@ -131,17 +95,6 @@ function ftoverride_civicrm_managed(&$entities) {
       'option_group_id' => 'ft_override_designation'
     ],
   ];
-}
-
-/**
- * Implements hook_civicrm_entityTypes().
- *
- * Declare entity types provided by this module.
- *
- * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_entityTypes
- */
-function ftoverride_civicrm_entityTypes(&$entityTypes) {
-  _ftoverride_civix_civicrm_entityTypes($entityTypes);
 }
 
 /**
